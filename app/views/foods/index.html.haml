@@ -1,0 +1,31 @@
+%h1 Listing foods
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Calorie
+      %th Protein
+      %th Carbohydrate
+      %th Lipid
+      %th Eat day
+      %th
+      %th
+      %th
+
+  %tbody
+    - @foods.each do |food|
+      %tr
+        %td= food.name
+        %td= food.calorie
+        %td= food.protein
+        %td= food.carbohydrate
+        %td= food.lipid
+        %td= food.eat_day
+        %td= link_to 'Show', food
+        %td= link_to 'Edit', edit_food_path(food)
+        %td= link_to 'Destroy', food, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Food', new_food_path

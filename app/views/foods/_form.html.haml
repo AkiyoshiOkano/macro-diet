@@ -1,0 +1,18 @@
+= simple_form_for(@food) do |f|
+  = f.error_notification
+
+  .field
+    = f.input :name, :input_html => { :class => 'form-control' }, label: "名称", placeholder: "食べたものを入力"
+  .field
+    = f.input :calorie, :input_html => { :class => 'form-control' }, label: "カロリー", placeholder: "カロリー（kcal）"
+  .field
+    = f.input :protein, :input_html => { :class => 'form-control' }, label: "タンパク質", placeholder: "タンパク質（g）"
+  .field
+    = f.input :carbohydrate, :input_html => { :class => 'form-control' }, label: "炭水化物", placeholder: "炭水化物（g）"
+  .field
+    = f.input :lipid, :input_html => { :class => 'form-control' }, label: "脂質", placeholder: "脂質（g）"
+  .field
+    = f.input :eat_day, label: "日付"
+
+  .field
+    = f.button :submit

@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @food.name
+%p
+  %b Calorie:
+  = @food.calorie
+%p
+  %b Protein:
+  = @food.protein
+%p
+  %b Carbohydrate:
+  = @food.carbohydrate
+%p
+  %b Lipid:
+  = @food.lipid
+%p
+  %b Eat day:
+  = @food.eat_day
+
+= link_to 'Edit', edit_food_path(@food)
+\|
+= link_to 'Back', foods_path
